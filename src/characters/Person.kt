@@ -105,13 +105,20 @@ fun main() { // шаг 5
 //    val enemy3 = Enemy("Дракон", 200)
 //    println(enemy3.getThreatLevel())
 
-    val blacksmith = NPC("кузнец ульфрик", hasQuest = true)
-    println(blacksmith.giveQuest())
-    blacksmith.trade()
+//    val blacksmith = NPC("кузнец ульфрик", hasQuest = true)
+//    println(blacksmith.giveQuest())
+//    blacksmith.trade()
+//
+//    val dragon = Boss("Алдуин", 500, "Огонь", phaseCount = 4, isFinalBoss = true)
+//    dragon.startPhase(2)
+//    println(dragon.dropLoot())
+//    dragon.takeDamage(150)
 
-    val dragon = Boss("Алдуин", 500, "Огонь", phaseCount = 4, isFinalBoss = true)
-    dragon.startPhase(2)
-    println(dragon.dropLoot())
-    dragon.takeDamage(150)
+    val enemy: GameCharacter = Enemy("джин")
+    val hero: GameCharacter = Hero("наруто")
+    val npc: GameCharacter = NPC("торговец")
 
+    (enemy as Enemy).takeDamage(20)
+    enemy.takeDamage(20)
+    println(enemy.name)
 }

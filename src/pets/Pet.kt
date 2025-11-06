@@ -5,11 +5,11 @@ open class Pet(
     val name: String,
     val maxHealth: Int
 ) {
-    fun describe() {
+    open fun describe() {
         println("Питомец: $name, Здоровье: $maxHealth, Скорость: $speed")
     }
 
-    fun makeSound() {
+    open fun makeSound() {
         println("$name подает голос.")
     }
 }
